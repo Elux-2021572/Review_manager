@@ -17,7 +17,7 @@ const middlewares = (app) => {
 }
 
 const routes = (app) => {
-    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+    app.use("/opinionManager/v1/auth",authRoutes)
 }
 
 const conectarDB = async () => {
