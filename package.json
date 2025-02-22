@@ -1,5 +1,5 @@
 {
-    "name": "review-manager",
+    "name": "review_manager",
     "version": "1.0.0",
     "description": "Un sistema de gestión de opiniones similar a las publicaciones de Facebook",
     "main": "index.js",
@@ -8,6 +8,17 @@
       "start": "node index.js",
       "dev": "node --watch index.js"  
     },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Elux-2021572/Review_manager.git"
+    },
+    "keywords": [
+      "review",
+      "manager",
+      "opinion",
+      "gestion",
+      "sistema"
+    ],
     "author": "Emilio Lux",
     "license": "MIT",
     "type": "module",
@@ -22,11 +33,13 @@
       "express-validator": "^7.2.1",
       "helmet": "^8.0.0",
       "jsonwebtoken": "^9.0.2",
-      "mongoose": "^8.9.5",
+      "mongoose": "^8.10.1",
       "morgan": "^1.10.0",
       "multer": "^1.4.5-lts.1",
-      "review-manager": "file:"
+      "swagger-jsdoc": "^6.2.8",
+      "swagger-ui-express": "^5.0.1",
+      "review_manager": "file:"
     }
-  } 
+} 
 
   
