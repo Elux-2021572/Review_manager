@@ -118,4 +118,3 @@ export const updateProfilePicture = async (req, res) => {
         });
     }
 };
-
