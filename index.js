@@ -1,8 +1,11 @@
 import {config} from "dotenv";
 import { initServer } from "./configs/server.js";
-import { addAdminDefault } from "./src/user/user.controller.js"
+import { createAdminDefault } from ".configs/createAdminDefault.js";
+import { createCategoryDefault } from "./configs/createCategoryDefault.js";
 
 
 config();
 initServer();
-addAdminDefault()
+createAdminDefault();
+createCategoryDefault();
+

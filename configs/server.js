@@ -8,7 +8,10 @@ import { dbConnection } from "./mongo.js";
 import  apiLimiter from "../src/middlewares/rate-limit-validator.js";
 import authRoutes from "../src/auth/auth.router.js"
 import userRoutes from "../src/user/user.router.js"
-
+import categoryRoutes from "../src/category/categoty.router.js"
+import postRoutes from "../src/post/post.router.js"
+import authRoutes from "../src/auth/auth.router.js"
+import userRoutes from "../src/user/user.router.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
@@ -20,6 +23,12 @@ const middlewares = (app) => {
 }
 
 const routes = (app) => {
+  
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+    app.use("/reviewManager/v1/auth",authRoutes)
+    app.use("/reviewManager/v1/user",userRoutes)
+    app.use("/reviewManager/v1/category",categoryRoutes)
+    app.use("/reviewManager/v1/post",postRoutes)
     app.use("/reviewManager/v1/auth",authRoutes)
     app.use("/reviewManager/v1/user",userRoutes)
 }

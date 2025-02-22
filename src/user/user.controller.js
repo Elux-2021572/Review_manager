@@ -118,20 +118,3 @@ export const updateProfilePicture = async (req, res) => {
         });
     }
 };
-
-export const addAdminDefault = async () => {
-    const admin = await User.findOne({ role: "ADMIN_ROLE" });
-    if (!admin) {
-        const profilePicture = "pictureAdmin.jpg";
-        await User.create({
-            name: "Emilio",
-            surname: "Lux",
-            username: "kernel",
-            email: "emiliojo.lux@gmail.com",
-            password: await hash("emLo06.20#"),
-            role: "ADMIN_ROLE",
-            phone: "54470765",
-            profilePicture: profilePicture
-        });
-    }
-};
